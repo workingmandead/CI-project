@@ -1,0 +1,49 @@
+{
+    "redirects": [
+        {
+            "url": "http://localhost:3000/redirecttest",
+            "redirectToUrl": "http://localhost:5000/test/about/?test=value",
+            "matchType": "absolute",
+            "httpStatusCode": "302"
+	},
+        {
+            "url": "http://localhost:3000/redirecttest1",
+            "redirectToUrl": "http://localhost:5000/test1",
+            "matchType": "absolute",
+            "httpStatusCode": "302"
+	},
+        {
+            "url": "/redirecttest2",
+            "redirectToUrl": "/test2",
+            "matchType": "relative",
+            "httpStatusCode": "302"
+	},
+        {
+            "url": "*redirecttest3*",
+            "redirectToUrl": "/books3",
+            "matchType": "wildcard",
+            "httpStatusCode": "302"
+	},
+        {
+            "url": "http://localhost:3000/redirecttest4*",
+            "redirectToUrl": "/test4",
+            "matchType": "wildcard",
+            "httpStatusCode": "302"
+	},
+        {
+            "url": "*redirecttest5",
+            "redirectToUrl": "/test5",
+            "matchType": "wildcard",
+            "httpStatusCode": "302"
+	}
+    ,
+        {
+            "url": "",
+            "redirectToUrl": "/test6",
+            "matchType": "regex",
+            "httpStatusCode": "302",
+            "regex": "regextest$",
+            "regexFlags":"g,i"
+	}
+]
+}
